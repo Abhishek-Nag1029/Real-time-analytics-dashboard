@@ -66,11 +66,6 @@ Then open the dashboard in your browser:
 🔹 **CSV/Excel Import** for bulk data analysis  
 🔹 **Database Storage** for historical insights  
 
----
-
-## 📫 Connect With Me  
-💼 **Business & Services:** [My Store](https://beacons.ai/k3nt_4)  
-📷 **Instagram:** [chef_xic](https://instagram.com/chef_xic)  
 
 <p align="center">
   <img src="https://i.gifer.com/XOsa.gif" width="500px">
