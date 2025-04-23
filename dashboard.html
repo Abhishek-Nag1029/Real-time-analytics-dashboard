@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMM Analytics Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #1E1E1E; color: white; text-align: center; }
+        table { width: 80%; margin: auto; border-collapse: collapse; background: #282828; }
+        th, td { padding: 10px; border: 1px solid #444; }
+        input, button { margin: 5px; padding: 8px; background: #ff4500; color: white; border: none; }
+        img { max-width: 100%; }
+    </style>
+</head>
+<body>
+
+    <h1>SMM Analytics Dashboard 📊</h1>
+
+    {% if plot_url %}
+        <img src="data:image/png;base64,{{ plot_url }}" alt="Follower Growth Chart">
+    {% endif %}
+
+    <h2>📌 Add New Data</h2>
+    <form method="post">
+        <input type="text" name="platform" placeholder="Platform (e.g. Instagram)" required>
+        <input type="number" name="followers" placeholder="Followers" required>
+        <input type="number" name="likes" placeholder="Likes" required>
+        <input type="number" name="comments" placeholder="Comments" required>
+        <input type="number" name="shares" placeholder="Shares" required>
+        <input type="date" name="date" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>📈 Data Overview</h2>
+    <table>
+        <tr>
+            <th>Platform</th>
+            <th>Followers</th>
+            <th>Likes</th>
+            <th>Comments</th>
+            <th>Shares</th>
+            <th>Date</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+            <td>{{ row[5] }}</td>
+            <td>{{ row[6] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
